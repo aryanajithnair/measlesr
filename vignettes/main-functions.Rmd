@@ -47,3 +47,12 @@ plot_detection_props(cases_year, methods = c("Clinical", "Epi-Linked", "Lab Conf
 ```
 
 This should make a stacked bar chart showing what proportion of total measles cases each year were identified by each detection method (clinical, epi-linked, or lab confirmed). The x-axis will show year and the y-axis will show proportion of total cases.
+
+### Function 4: `summarize_measles()`
+
+```{r}
+summarize_measles(cases_month, country = "Madagascar")
+summarize_measles(cases_year, country = "Madagascar")
+```
+
+This should return a summary tibble of measles and rubella case data for a given country. It automatically detects whether the input is the monthly or yearly dataset based on column structure. For the monthly dataset, it aggregates across months to return one row per year, with columns for total measles cases, lab-confirmed cases, rubella totals, and number of months reported. For the yearly dataset, it selects and renames the key columns for a cleaner output, including incidence rates per million population. The `country` argument is optional. If omitted, the summary is returned for all countries.
