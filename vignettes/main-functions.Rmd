@@ -1,0 +1,49 @@
+---
+title: "main-functions"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{main-functions}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(measlesr)
+```
+
+## Planned Functions for measlesr
+
+### Function 1: `plot_monthly_cases()`
+
+```{r}
+plot_monthly_cases(cases_month, year = 2018, country = "Madagascar")
+```
+
+This should make a line plot showing the total number of measles cases for each month in a given year for a specified country. The x-axis will show months (Jan–Dec) and the y-axis will show total case counts.
+
+---
+
+### Function 2: `yearly_case_summary()`
+
+```{r}
+yearly_case_summary(cases_year, country = "Madagascar")
+```
+
+This should return a summary table showing the total measles cases per year for a given country, along with the year-over-year percentage change and a trend label (surging, stable, or declining).
+
+---
+
+### Function 3: `plot_detection_props()`
+
+```{r}
+plot_detection_props(cases_year, methods = c("Clinical", "Epi-Linked", "Lab Confirmed"), min_year = 2012)
+```
+
+This should make a stacked bar chart showing what proportion of total measles cases each year were identified by each detection method (clinical, epi-linked, or lab confirmed). The x-axis will show year and the y-axis will show proportion of total cases.

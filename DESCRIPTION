@@ -1,0 +1,27 @@
+Package: measlesr
+Title: Tools for Exploring and Visualizing Global Measles Case Data
+Version: 0.0.0.9000
+Authors@R: 
+    c(person("Aryan", "Ajith Nair", , "ajithnai@calpoly.edu", role = c("aut", "cre")),
+    person("Amanda", "Dong", , "amdong@calpoly.edu", role = "aut"),
+    person("Natalie", "Cartwright", , "nacartwr@calpoly.edu", role = "aut"),
+    person("Zita", "Tam", , "ztam@calpoly.edu", role = "aut"))
+Description: A collection of functions for loading, summarising, and visualizing
+    global measles case data sourced from the WHO via the Tidy Tuesday project
+    (2025-06-24 release). Provides tools for trend analysis, detection
+    method breakdowns, and country-level outbreak investigation.
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 8.0.0
+Imports: 
+    readr
+Suggests: 
+    knitr,
+    rmarkdown,
+    testthat (>= 3.0.0)
+VignetteBuilder: knitr
+URL: https://github.com/amandaadong/measlesr
+BugReports: https://github.com/amandaadong/measlesr/issues
+Config/testthat/edition: 3
